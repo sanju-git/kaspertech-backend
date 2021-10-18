@@ -7,4 +7,4 @@
 
 
 To add a rider:
-use the API kaspertech-api.herokuapp.com//admin/add-rider?rider=ridername in postman or web browser
+use the API kaspertech-api.herokuapp.com/admin/add-rider?rider=ridername in postman or web browser
