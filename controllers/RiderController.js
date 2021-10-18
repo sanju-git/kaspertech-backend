@@ -1,4 +1,3 @@
-var mongoose = require("mongoose");
 const Order = require("../models/Order");
 const Rider = require("../models/Rider");
 
@@ -18,10 +17,10 @@ exports.validateRider = async (req, res, next) => {
       valid,
     });
   } catch (error) {
-    console.error("add rider:", error);
+    console.error("validate rider:", error);
     return res
       .status(500)
-      .json({ msg: "Adding rider failed. Please try again later." });
+      .json({ msg: "Validating rider failed. Please try again later." });
   }
 };
 
@@ -36,10 +35,10 @@ exports.getRiderOrders = async (req, res, next) => {
       orders,
     });
   } catch (error) {
-    console.error("add rider:", error);
+    console.error("get rider:", error);
     return res
       .status(500)
-      .json({ msg: "Adding rider failed. Please try again later." });
+      .json({ msg: "getting rider failed. Please try again later." });
   }
 };
 
@@ -59,9 +58,7 @@ exports.changeOrderStatus = async (req, res, next) => {
       success: true,
     });
   } catch (error) {
-    console.error("add rider:", error);
-    return res
-      .status(500)
-      .json({ msg: "Adding rider failed. Please try again later." });
+    console.error("change otder status failed:", error);
+    return res.status(500).json({ msg: "Changing order status failed." });
   }
 };

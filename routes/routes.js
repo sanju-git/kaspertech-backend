@@ -15,9 +15,6 @@ const {
   changeOrderStatus,
 } = require("./../controllers/RiderController");
 
-//test
-router.post("/admin/cli", cli);
-
 //admin
 router.post("/admin/create-order", createOrder);
 router.get("/admin/add-rider", addRider);

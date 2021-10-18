@@ -1,20 +1,5 @@
-var mongoose = require("mongoose");
 const Order = require("../models/Order");
 const Rider = require("../models/Rider");
-
-exports.cli = async (req, res, next) => {
-  try {
-    // await Order.deleteMany({});
-    return res.status(200).json({
-      success: true,
-    });
-  } catch (error) {
-    console.error("create order:", error);
-    return res
-      .status(500)
-      .json({ msg: "Order Creation failed. Please try again later." });
-  }
-};
 
 exports.createOrder = async (req, res, next) => {
   try {
@@ -68,7 +53,6 @@ exports.getRiders = async (req, res, next) => {
 
 exports.getAllOrders = async (req, res, next) => {
   try {
-    // await Order.deleteMany({});
     let orders = [];
     orders = await Order.find({});
     return res.status(200).json({
